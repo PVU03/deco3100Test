@@ -35,8 +35,12 @@ function plotQ1Charts() {
     };
 
     let layout = {
-      xaxis: { title: 'Globe Temperature (°C)' },
-      yaxis: { title: 'Predicted Mean Vote (PMV)' },
+      xaxis: {
+        title: 'Globe Temperature (°C)'
+      },
+      yaxis: {
+        title: 'Predicted Mean Vote (PMV)'
+      },
       margin: { t: 50, l: 60, r: 40, b: 60 },
       shapes: [
         {
@@ -63,13 +67,13 @@ function plotQ1Charts() {
       annotations: [
         {
           xref: 'paper', x: 1, yref: 'y', y: -0.61,
-          text: 'Men Productive PVM', showarrow: false, xanchor: 'left',
+          text: 'Men Productive PMV', showarrow: false, xanchor: 'left',
           font: { color: 'black', size: 12 },
           bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
         },
         {
           xref: 'paper', x: 1, yref: 'y', y: 0.23,
-          text: 'Women Productive PVM', showarrow: false, xanchor: 'left',
+          text: 'Women Productive PMV', showarrow: false, xanchor: 'left',
           font: { color: 'black', size: 12 },
           bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
         }
@@ -96,9 +100,8 @@ function plotQ1Charts() {
     };
 
     let layout2 = {
-      title: 'Weekly Average Global Temperature Over Time',
       xaxis: {
-        title: 'Weekly Timeline (XXX to AAA)'
+        title: 'Weekly Timeline (January - March)'
       },
       yaxis: {
         title: 'Globe Temperature (°C)'
@@ -150,9 +153,12 @@ function plotQ2Charts() {
     };
 
     let layout = {
-      title: 'Globe Temperature vs PMV (Colored by PPD)',
-      xaxis: { title: 'Globe Temperature (°C)' },
-      yaxis: { title: 'Predicted Mean Vote (PMV)' },
+      xaxis: {
+        title: 'Globe Temperature (°C)'
+      },
+      yaxis: {
+        title: 'Predicted Mean Vote (PMV)'
+      },
       margin: { t: 50, l: 60, r: 40, b: 60 },
       shapes: [
         {
@@ -169,13 +175,13 @@ function plotQ2Charts() {
       annotations: [
         {
           xref: 'paper', x: 1, yref: 'y', y: -0.61,
-          text: 'Men Productive PVM', showarrow: false, xanchor: 'left',
+          text: 'Men Productive PMV', showarrow: false, xanchor: 'left',
           font: { color: 'black', size: 12 },
           bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
         },
         {
           xref: 'paper', x: 1, yref: 'y', y: 0.23,
-          text: 'Women Productive PVM', showarrow: false, xanchor: 'left',
+          text: 'Women productive PMV', showarrow: false, xanchor: 'left',
           font: { color: 'black', size: 12 },
           bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
         }
@@ -202,9 +208,8 @@ function plotQ2Charts() {
     };
 
     let layout2 = {
-      title: 'Weekly Average Global Temperature Over Time',
       xaxis: {
-        title: 'Weekly Timeline (XXX to AAA)'
+        title: 'Weekly Timeline (April to June)'
       },
       yaxis: {
         title: 'Globe Temperature (°C)'
@@ -257,11 +262,12 @@ function plotQ3Charts() {
     };
 
     let layout = {
-      title: 'Globe Temperature vs PMV (Colored by PPD)',
       xaxis: {
         title: 'Globe Temperature (°C)'
       },
-      yaxis: { title: 'Predicted Mean Vote (PMV)' },
+      yaxis: {
+        title: 'Predicted Mean Vote (PMV)'
+      },
       margin: {
         t: 50,
         l: 60,
@@ -304,7 +310,7 @@ function plotQ3Charts() {
           x: 1,              // position at the right edge (1 = 100%)
           yref: 'y',         // data coordinates for y axis
           y: -0.61,          // same as your line y position
-          text: 'Men Productive PVM',  // your label text
+          text: 'men productive PMV',  // your label text
           showarrow: false,  // no arrow, just text
           xanchor: 'left',   // text starts just right of x=1 (right edge)
           font: {
@@ -319,7 +325,7 @@ function plotQ3Charts() {
           x: 1,              // position at the right edge (1 = 100%)
           yref: 'y',         // data coordinates for y axis
           y: .23,          // same as your line y position
-          text: 'Women Productive PVM',  // your label text
+          text: 'Women productive PMV',  // your label text
           showarrow: false,  // no arrow, just text
           xanchor: 'left',   // text starts just right of x=1 (right edge)
           font: {
@@ -355,9 +361,8 @@ function plotQ3Charts() {
     };
 
     let layout2 = {
-      title: 'Weekly Average Global Temperature Over Time',
       xaxis: {
-        title: 'Weekly Timeline (XXX to AAA)'
+        title: 'Weekly Timeline (July to September)'
       },
       yaxis: {
         title: 'Globe Temperature (°C)'
@@ -410,11 +415,12 @@ function plotQ4Charts() {
     };
 
     let layout = {
-      title: 'Globe Temperature vs PMV (Colored by PPD)',
       xaxis: {
         title: 'Globe Temperature (°C)'
       },
-      yaxis: { title: 'Predicted Mean Vote (PMV)' },
+      yaxis: {
+        title: 'Predicted Mean Vote (PMV)'
+      },
       margin: {
         t: 50,
         l: 60,
@@ -457,7 +463,7 @@ function plotQ4Charts() {
           x: 1,              // position at the right edge (1 = 100%)
           yref: 'y',         // data coordinates for y axis
           y: -0.61,          // same as your line y position
-          text: 'Men Productive PVM',  // your label text
+          text: 'Men Productive PMV',  // your label text
           showarrow: false,  // no arrow, just text
           xanchor: 'left',   // text starts just right of x=1 (right edge)
           font: {
@@ -472,7 +478,7 @@ function plotQ4Charts() {
           x: 1,              // position at the right edge (1 = 100%)
           yref: 'y',         // data coordinates for y axis
           y: .23,          // same as your line y position
-          text: 'Women Productive PVM',  // your label text
+          text: 'Women Productive PMV',  // your label text
           showarrow: false,  // no arrow, just text
           xanchor: 'left',   // text starts just right of x=1 (right edge)
           font: {
@@ -508,9 +514,8 @@ function plotQ4Charts() {
     };
 
     let layout2 = {
-      title: 'Weekly Average Global Temperature Over Time',
       xaxis: {
-        title: 'Weekly Timeline (XXX to AAA)'
+        title: 'Weekly Timeline (October to December)'
       },
       yaxis: {
         title: 'Globe Temperature (°C)'
@@ -532,7 +537,7 @@ window.onload = () => {
   // Set the dropdown values to match the initial content
   document.querySelector('.leftSide .dropdown').value = 'model3';
   document.querySelector('.rightSide .dropdown').value = 'model4';
-  
+
   // Load the initial content
   changeContent("leftSide", "model3");
   changeContent("rightSide", "model4");

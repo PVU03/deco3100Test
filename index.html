@@ -18,6 +18,7 @@
 
         <div class="leftSide">
             <select class="dropdown" onchange="changeContent('leftSide', this.value)">
+                <option value="warning" disabled>Do not pick the same choice, some charts may not load</option>
                 <option value="model1">Q1 - 2019</option>
                 <option value="model2">Q2 - 2019</option>
                 <option value="model3">Q3 - 2019</option>
@@ -28,6 +29,7 @@
 
         <div class="rightSide">
             <select class="dropdown" onchange="changeContent('rightSide', this.value)">
+                <option value="warning" disabled>Do not pick the same choice, some charts may not load</option>
                 <option value="model1">Q1 - 2019</option>
                 <option value="model2">Q2 - 2019</option>
                 <option value="model3">Q3 - 2019</option>
@@ -38,85 +40,179 @@
     </div>
 
     <!-- Shared templates -->
+    <!-- Quarter 1 -->
     <template id="model1">
         <div class="model">
             <div id="summary">
                 <h2>SUMMARY OF Q1 - 2019</h2>
-                <p>HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO.
-                    HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO. HI HELLO.
-                    HI HELLO. HI HELLO. HI HELLO. </p>
+                <li>During the middle of the quarter, temperatures peaked, making the environment feel noticeably warmer
+                    and less comfortable for employees.</li>
+                <li>Week 5 saw the highest temperature and dissatisfaction levels, likely impacting productivity.</li>
+                <li>As temperatures gradually declined in the later weeks, comfort levels improved and dissatisfaction
+                    decreased.</li>
             </div>
             <div id="gtVsPMV">
                 <h3>Global Temperature vs Predicted Mean Value (Coloured by Predicted Percentage Dissatisfied)</h3>
                 <div id="q1_gtVsPMV"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br><br>
+                    In this quarter, the global temperature was settled between 24°C and 26°C. With week 5 being the
+                    highest recorded temperature, it also recorded the highest predicted mean value (PMV) at 0.87,
+                    meaning
+                    employees are predicted to have felt warmer in this week. This means employees may have noticed that
+                    their
+                    environment has felt warmer.
+                    <br><br>
+                    Alongsde this, the predicted percentage dissatisfied (PPD) also reached its highest in week 5,
+                    reaching
+                    24.7% of employees in the environment feeling dissatisfied with the increase in temperature.
+                    <br><br>
+                    For the rest of the quarter after week 5, the temperature tended decline, with the PMV ranging
+                    between 0.5 to 0.65. PPD also tended to be stay around the 13-18% range.
+                </p>
             </div>
             <div id="averageGT">
                 <h3>Weekly Average Global Temperature</h3>
                 <div id="q1_avgGT"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br>
+                    <br>
+                    In this quarter, the highest average global temperature was in the 5th week where the temperature
+                    reached 25.7°C. Following this week, the temperature started to decline reaching the lowest
+                    average globalt emperature in week 12 at 24.3°C.
+                    <br>
+                    <br>
+                    Throughout this quarter, the temperature fluctuated between 24.3°C and 25.7°C, meaning the
+                    temperature
+                    tends to be relatively stable throughout the quarter. Week 5 may refelct a temporary warming event.
+                </p>
             </div>
         </div>
     </template>
 
+    <!-- Quarter 2 -->
     <template id="model2">
         <div class="model">
             <div id="summary">
                 <h2>SUMMARY OF Q2 - 2019</h2>
-                <p>HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE
-                    YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW ARE YOU? HOW
-                    ARE YOU? HOW ARE YOU? HOW ARE YOU? </p>
+                <li>During the middle of the quarter, temperatures peaked, making the environment feel noticeably warmer
+                    and less comfortable for employees.</li>
+                <li>Week 17 saw the highest temperature and dissatisfaction levels, likely impacting productivity.</li>
+                <li>As temperatures gradually declined in the later weeks, comfort levels improved and dissatisfaction
+                    decreased.</li>
             </div>
             <div id="gtVsPMV">
                 <h3>Global Temperature vs Predicted Mean Value (Coloured by Predicted Percentage Dissatisfied)</h3>
                 <div id="q2_gtVsPMV"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br><br>
+                    During this quarter, the average global temperature mostly ranged between 22.7°C and 25.2°C. The
+                    highest temperature was recorded in week 17 at 25.18°C, which also corresponded to the highest
+                    predicted mean vote (PMV) value of 0.68, indicating that occupants likely felt warmer during this
+                    week.
+                    <br><br>
+                    Correspondingly, the predicted percentage of dissatisfied (PPD) peaked in week 17 as well, reaching
+                    approximately 17.75%, suggesting an increased level of discomfort among employees due to the warmer
+                    conditions.
+                    <br><br>
+                    Following week 17, temperatures dropped slightly, with PMV values fluctuating near neutral or
+                    slightly positive levels, mostly between -0.08 and 0.38. The PPD also generally remained around
+                    10–11%, indicating that the majority of occupants experienced moderate comfort for most of the
+                    weeks.
+                </p>
             </div>
             <div id="averageGT">
                 <h3>Weekly Average Global Temperature</h3>
                 <div id="q2_avgGT"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br><br>
+                    In this quarter, the highest average global temperature was recorded in week 17, reaching 25.18°C.
+                    After this peak, temperatures generally declined, with the lowest average global temperature
+                    observed
+                    in week 25 at around 22.78°C.
+                    <br><br>
+                    Overall, the temperature fluctuated between approximately 22.7°C and 25.2°C, indicating a moderate
+                    but noticeable variation during the weeks. Week 17 appears to reflect a temporary warming event.
+                </p>
+
             </div>
         </div>
     </template>
 
+    <!-- Quarter 3 -->
     <template id="model3">
         <div class="model">
             <div id="summary">
                 <h2>SUMMARY OF Q3 - 2019</h2>
-                <p>IM GOOD THANK YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? IM GOOD
-                    THANK YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? IM GOOD THANK
-                    YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? IM GOOD THANK YOU HOW ABOUT U? </p>
+                <li>During this quarter, the global temperature settled around 23.2°C to 23.7°C</li>
+                <li>Overall PMV tends to be in the ideal range for productivity</li>
+                <li>Comfort levels are seen to be roughly ideal for all employees</li>
             </div>
             <div id="gtVsPMV">
                 <h3>Global Temperature vs Predicted Mean Value (Coloured by Predicted Percentage Dissatisfied)</h3>
                 <div id="q3_gtVsPMV"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br><br>
+                    During this quarter, the average global temperature mostly ranged between 23.2°C and 23.7°C. The
+                    highest temperature was recorded in week 39 at 23.7°C. At this temperature, the predicted mean value
+                    (PMV) is at -0.14. The predicted percentage dissatisfied (PPD) is at 10.43%.
+                    <br><br>
+                    The highest PPD was recorded during week 29 at 11.26%. Overall this means this quarter was faily
+                    ideal for productivity levels.
+                    <br><br>
+                </p>
             </div>
             <div id="averageGT">
                 <h3>Weekly Average Global Temperature</h3>
                 <div id="q3_avgGT"></div>
-                <p>Summary about this graph</p>
+                <p><b>Summary</b>
+                    <br><br>
+                    In this quarter, the average global temperature started around 23.26°C. From there the temperature
+                    increases until week 35 where it dropped suddenly to 23.27°C but then went back up. The highest
+                    average global temperature was recorded in week 39, reaching 23.7°C.
+                    <br><br>
+                    Overall, the temperature fluctuated between approximately 23.3°C and 23.7°C, indicating minor
+                    variation during the weeks. Week 35 appears to reflect a temporary cooling event.
+                </p>
             </div>
         </div>
     </template>
 
+    <!-- Quarter 4 -->
     <template id="model4">
         <div class="model">
             <div id="summary">
                 <h2>SUMMARY OF Q4 - 2019</h2>
-                <p>IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS
-                    WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM.
-                    IM GOOD AS WELL TYVM. IM GOOD AS WELL TYVM.</p>
+                <li>During this quarter, the global temperature settled around 23.995°C to 25.4°C</li>
+                <li>Overall PMV tends to be in the ideal range for productivity, except for the outlier of week 52</li>
+                <li>Comfort levels are seen to be roughly ideal for all employees, with the outlier of week 52</li>
             </div>
             <h3>Global Temperature vs Predicted Mean Value (Coloured by Predicted Percentage Dissatisfied)</h3>
             <div id="q4_gtVsPMV"></div>
-            <p>Summary about this graph</p>
+            <p><b>Summary</b>
+                <br><br>
+                During this quarter, the average global temperature mostly ranged between 23.995°C and 25.4°C. The
+                highest temperature was recorded in week 52 at 25.4°C, which also corresponded to the highest
+                predicted mean vote (PMV) value of 0.35, indicating that occupants likely felt slightly warm during this
+                week.
+                <br><br>
+                Correspondingly, the predicted percentage of dissatisfied (PPD) peaked in week 52 as well, reaching
+                approximately 14.72%, suggesting an increased level of discomfort among employees due to the warmer
+                conditions.
+            </p>
         </div>
         <div id="averageGT">
             <h3>Weekly Average Global Temperature</h3>
             <div id="q4_avgGT"></div>
-            <p>Summary about this graph</p>
+            <p><b>Summary</b>
+                <br><br>
+                In this quarter, the average global temperature started around 24°C. From there the temperature
+                increases and starts to stablise in week 45 at 24.5°C. In week 52, the temperature spiked to 25.4°C.
+                After this, the temperature plummeted to 24.3°C.
+                <br><br>
+                Overall, the temperature was stable until the end where there may have been a major warming event
+                followed by a major cooling event.
+            </p>
         </div>
         </div>
     </template>
