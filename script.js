@@ -39,7 +39,7 @@ function plotQ1Charts() {
         title: 'Globe Temperature (°C)'
       },
       yaxis: {
-        title: 'Predicted Mean Vote (PMV)'
+        title: 'Predicted Mean Value (PMV)'
       },
       margin: { t: 50, l: 60, r: 40, b: 60 },
       shapes: [
@@ -157,7 +157,7 @@ function plotQ2Charts() {
         title: 'Globe Temperature (°C)'
       },
       yaxis: {
-        title: 'Predicted Mean Vote (PMV)'
+        title: 'Predicted Mean Value (PMV)'
       },
       margin: { t: 50, l: 60, r: 40, b: 60 },
       shapes: [
@@ -266,7 +266,7 @@ function plotQ3Charts() {
         title: 'Globe Temperature (°C)'
       },
       yaxis: {
-        title: 'Predicted Mean Vote (PMV)'
+        title: 'Predicted Mean Value (PMV)'
       },
       margin: {
         t: 50,
@@ -419,7 +419,7 @@ function plotQ4Charts() {
         title: 'Globe Temperature (°C)'
       },
       yaxis: {
-        title: 'Predicted Mean Vote (PMV)'
+        title: 'Predicted Mean Value (PMV)'
       },
       margin: {
         t: 50,
