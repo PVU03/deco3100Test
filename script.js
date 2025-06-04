@@ -86,7 +86,7 @@ function plotQ1Charts() {
   const mapDiv2 = document.getElementById("q1_avgGT");
 
   d3.csv("q1WeeklyAvg.csv").then(gt_data => {
-    const week = unpack(gt_data, "week");
+    const week = unpack(gt_data, "qweek");
     const gt = unpack(gt_data, "avg_tg");
 
     let trace2 = {
@@ -194,7 +194,7 @@ function plotQ2Charts() {
   const mapDiv4 = document.getElementById("q2_avgGT");
 
   d3.csv("q2WeeklyAvg.csv").then(gt_data => {
-    const week = unpack(gt_data, "week");
+    const week = unpack(gt_data, "qweek");
     const gt = unpack(gt_data, "avg_tg");
 
     let trace4 = {
@@ -347,7 +347,7 @@ function plotQ3Charts() {
   const mapDiv6 = document.getElementById("q3_avgGT");
 
   d3.csv("q3WeeklyAvg.csv").then(gt_data => {
-    const week = unpack(gt_data, "week");
+    const week = unpack(gt_data, "qweek");
     const gt = unpack(gt_data, "avg_tg");
 
     let trace6 = {
@@ -500,7 +500,7 @@ function plotQ4Charts() {
   const mapDiv8 = document.getElementById("q4_avgGT");
 
   d3.csv("q4WeeklyAvg.csv").then(gt_data => {
-    const week = unpack(gt_data, "week");
+    const week = unpack(gt_data, "qweek");
     const gt = unpack(gt_data, "avg_tg");
 
     let trace8 = {
