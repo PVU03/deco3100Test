@@ -37,7 +37,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 140px 1fr;
+    grid-template-rows: 120px 100px 1fr;
     grid-template-areas:
         "header header"
         "description description"
