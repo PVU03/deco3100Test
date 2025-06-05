@@ -88,7 +88,26 @@ function plotQ1Charts() {
       }
     };
 
-    Plotly.newPlot(mapDiv2, [trace2], layout2);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv2, [trace2], layout2, config);
   });
 
 
@@ -158,21 +177,58 @@ function plotQ1Charts() {
       ],
       annotations: [
         {
-          xref: 'paper', x: 1, yref: 'y', y: -0.61,
-          text: 'Men Productive PMV', showarrow: false, xanchor: 'left',
-          font: { color: 'black', size: 12 },
-          bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: -0.61,
+          text: 'Ideal Men productive PMV',
+          showarrow: false,
+          xanchor: 'left',
+          font: {
+            color: 'black',
+            size: 12
+          },
+          bgcolor: 'rgba(255,255,255,0.8)',
+          borderpad: 2
         },
         {
-          xref: 'paper', x: 1, yref: 'y', y: 0.23,
-          text: 'Women Productive PMV', showarrow: false, xanchor: 'left',
-          font: { color: 'black', size: 12 },
-          bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: .23,
+          text: 'Ideal Women productive PMV',
+          showarrow: false,
+          xanchor: 'left',
+          font: {
+            color: 'black',
+            size: 12
+          },
+          bgcolor: 'rgba(255,255,255,0.8)',
+          borderpad: 2
         }
       ]
     };
 
-    Plotly.newPlot(mapDiv, [trace1], layout);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv, [trace1], layout, config);
   });
 }
 
@@ -213,7 +269,26 @@ function plotQ2Charts() {
       }
     };
 
-    Plotly.newPlot(mapDiv4, [trace4], layout2);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv4, [trace4], layout2, config);
   });
 
 
@@ -258,36 +333,96 @@ function plotQ2Charts() {
       yaxis: {
         title: 'Predicted Mean Value (PMV)'
       },
-      margin: { t: 50, l: 60, r: 40, b: 60 },
+      margin: {
+        t: 50,
+        l: 60,
+        r: 40,
+        b: 60
+      },
       shapes: [
         {
-          type: 'line', xref: 'paper', x0: 0, x1: 1,
-          yref: 'y', y0: -0.61, y1: -0.61,
-          line: { color: 'black', width: 2, dash: 'dot' }
+          type: 'line',
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
+          y0: -0.61,
+          y1: -0.61,
+          line: {
+            color: 'black',
+            width: 2,
+            dash: 'dot'
+          }
         },
         {
-          type: 'line', xref: 'paper', x0: 0, x1: 1,
-          yref: 'y', y0: 0.23, y1: 0.23,
-          line: { color: 'black', width: 2, dash: 'dot' }
+          type: 'line',
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
+          y0: 0.23,
+          y1: 0.23,
+          line: {
+            color: 'black',
+            width: 2,
+            dash: 'dot'
+          }
         }
       ],
       annotations: [
         {
-          xref: 'paper', x: 1, yref: 'y', y: -0.61,
-          text: 'Men Productive PMV', showarrow: false, xanchor: 'left',
-          font: { color: 'black', size: 12 },
-          bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: -0.61,
+          text: 'Ideal Men productive PMV',
+          showarrow: false,
+          xanchor: 'left',
+          font: {
+            color: 'black',
+            size: 12
+          },
+          bgcolor: 'rgba(255,255,255,0.8)',
+          borderpad: 2
         },
         {
-          xref: 'paper', x: 1, yref: 'y', y: 0.23,
-          text: 'Women productive PMV', showarrow: false, xanchor: 'left',
-          font: { color: 'black', size: 12 },
-          bgcolor: 'rgba(255,255,255,0.8)', borderpad: 2
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: .23,
+          text: 'Ideal Women productive PMV',
+          showarrow: false,
+          xanchor: 'left',
+          font: {
+            color: 'black',
+            size: 12
+          },
+          bgcolor: 'rgba(255,255,255,0.8)',
+          borderpad: 2
         }
       ]
     };
 
-    Plotly.newPlot(mapDiv3, [trace3], layout);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv3, [trace3], layout, config);
   });
 }
 
@@ -327,7 +462,26 @@ function plotQ3Charts() {
       }
     };
 
-    Plotly.newPlot(mapDiv6, [trace6], layout2);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv6, [trace6], layout2, config);
   });
 
 
@@ -381,10 +535,10 @@ function plotQ3Charts() {
       shapes: [
         {
           type: 'line',
-          xref: 'paper',   // Use paper coordinates for x-axis
-          x0: 0,           // start at left edge
-          x1: 1,           // end at right edge
-          yref: 'y',       // Use data coordinates for y-axis
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
           y0: -0.61,
           y1: -0.61,
           line: {
@@ -395,10 +549,10 @@ function plotQ3Charts() {
         },
         {
           type: 'line',
-          xref: 'paper',   // Use paper coordinates for x-axis
-          x0: 0,           // start at left edge
-          x1: 1,           // end at right edge
-          yref: 'y',       // Use data coordinates for y-axis
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
           y0: 0.23,
           y1: 0.23,
           line: {
@@ -410,40 +564,59 @@ function plotQ3Charts() {
       ],
       annotations: [
         {
-          xref: 'paper',     // position relative to the whole plot width
-          x: 1,              // position at the right edge (1 = 100%)
-          yref: 'y',         // data coordinates for y axis
-          y: -0.61,          // same as your line y position
-          text: 'men productive PMV',  // your label text
-          showarrow: false,  // no arrow, just text
-          xanchor: 'left',   // text starts just right of x=1 (right edge)
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: -0.61,
+          text: 'Ideal Men productive PMV',
+          showarrow: false,
+          xanchor: 'left',
           font: {
             color: 'black',
             size: 12
           },
-          bgcolor: 'rgba(255,255,255,0.8)', // optional: white background with some transparency
+          bgcolor: 'rgba(255,255,255,0.8)',
           borderpad: 2
         },
         {
-          xref: 'paper',     // position relative to the whole plot width
-          x: 1,              // position at the right edge (1 = 100%)
-          yref: 'y',         // data coordinates for y axis
-          y: .23,          // same as your line y position
-          text: 'Women productive PMV',  // your label text
-          showarrow: false,  // no arrow, just text
-          xanchor: 'left',   // text starts just right of x=1 (right edge)
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: .23,
+          text: 'Ideal Women productive PMV',
+          showarrow: false,
+          xanchor: 'left',
           font: {
             color: 'black',
             size: 12
           },
-          bgcolor: 'rgba(255,255,255,0.8)', // optional: white background with some transparency
+          bgcolor: 'rgba(255,255,255,0.8)',
           borderpad: 2
         }
       ]
 
     };
 
-    Plotly.newPlot(mapDiv5, [trace5], layout);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv5, [trace5], layout, config);
   });
 }
 
@@ -483,7 +656,26 @@ function plotQ4Charts() {
       }
     };
 
-    Plotly.newPlot(mapDiv8, [trace8], layout2);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv8, [trace8], layout2, config);
   });
 
 
@@ -537,10 +729,10 @@ function plotQ4Charts() {
       shapes: [
         {
           type: 'line',
-          xref: 'paper',   // Use paper coordinates for x-axis
-          x0: 0,           // start at left edge
-          x1: 1,           // end at right edge
-          yref: 'y',       // Use data coordinates for y-axis
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
           y0: -0.61,
           y1: -0.61,
           line: {
@@ -551,10 +743,10 @@ function plotQ4Charts() {
         },
         {
           type: 'line',
-          xref: 'paper',   // Use paper coordinates for x-axis
-          x0: 0,           // start at left edge
-          x1: 1,           // end at right edge
-          yref: 'y',       // Use data coordinates for y-axis
+          xref: 'paper',
+          x0: 0,
+          x1: 1,
+          yref: 'y',
           y0: 0.23,
           y1: 0.23,
           line: {
@@ -566,39 +758,57 @@ function plotQ4Charts() {
       ],
       annotations: [
         {
-          xref: 'paper',     // position relative to the whole plot width
-          x: 1,              // position at the right edge (1 = 100%)
-          yref: 'y',         // data coordinates for y axis
-          y: -0.61,          // same as your line y position
-          text: 'Men Productive PMV',  // your label text
-          showarrow: false,  // no arrow, just text
-          xanchor: 'left',   // text starts just right of x=1 (right edge)
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: -0.61,
+          text: 'Ideal Men Productive PMV',
+          showarrow: false,
+          xanchor: 'left',
           font: {
             color: 'black',
             size: 12
           },
-          bgcolor: 'rgba(255,255,255,0.8)', // optional: white background with some transparency
+          bgcolor: 'rgba(255,255,255,0.8)',
           borderpad: 2
         },
         {
-          xref: 'paper',     // position relative to the whole plot width
-          x: 1,              // position at the right edge (1 = 100%)
-          yref: 'y',         // data coordinates for y axis
-          y: .23,          // same as your line y position
-          text: 'Women Productive PMV',  // your label text
-          showarrow: false,  // no arrow, just text
-          xanchor: 'left',   // text starts just right of x=1 (right edge)
+          xref: 'paper',
+          x: 0,
+          yref: 'y',
+          y: .23,
+          text: 'Ideal Women Productive PMV',
+          showarrow: false,
+          xanchor: 'left',
           font: {
             color: 'black',
             size: 12
           },
-          bgcolor: 'rgba(255,255,255,0.8)', // optional: white background with some transparency
+          bgcolor: 'rgba(255,255,255,0.8)',
           borderpad: 2
         }
       ]
-
     };
 
-    Plotly.newPlot(mapDiv7, [trace7], layout);
+    let config = {
+      scrollZoom: false,
+      displayModeBar: false,
+      staticPlot: false,
+      responsive: true,
+      doubleClick: false,
+      displaylogo: false,
+      modeBarButtonsToRemove: [
+        'zoom2d',
+        'pan2d',
+        'select2d',
+        'lasso2d',
+        'zoomIn2d',
+        'zoomOut2d',
+        'autoScale2d',
+        'resetScale2d'
+      ]
+    };
+
+    Plotly.newPlot(mapDiv7, [trace7], layout, config);
   });
 }

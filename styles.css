@@ -37,7 +37,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 100px 1fr;
+    grid-template-rows: 120px 120px 1fr;
     grid-template-areas:
         "header header"
         "description description"
@@ -70,7 +70,7 @@ body {
 .description {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px;
+    grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
         "gt pmv ppd";
@@ -82,8 +82,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 8px;
+    text-align: center;
+    padding: 16px;
+    padding-left: 32px;
 }
 
 .pmv {
@@ -91,8 +92,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 8px;
+    text-align: center;
+    padding: 16px;
 }
 
 .ppd {
@@ -100,8 +101,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 8px;
+    text-align: center;
+    padding: 16px;
+    padding-right: 32px;
 }
 
 .leftSide,
