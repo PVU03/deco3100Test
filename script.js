@@ -1,4 +1,4 @@
-// Content Changer so when an option from dropdown is selected, it changes the content on the side that got changed. 
+// content Changer so when an option from dropdown is selected, it changes the content on the side that got changed. 
 // had the help of ChatGPT to help me with this. Transcript in Appendix
 function changeContent(side, modelId) {
   const template = document.getElementById(modelId);
@@ -49,38 +49,42 @@ window.onload = () => {
 
 
 
-// Function to unpack data values based on the key in the top line
+// function to unpack data values based on the key in the top line
 const unpack = (data, key) => data.map(row => row[key]);
 
 
 
-// Function to plot the charts for the first quarter
+// function to plot the charts for the first quarter
+// each function is the same as this one, just the mapDiv and csv changed for their respective quarters
 function plotQ1Charts() {
-  // Weekly Average TG for quarter 1
-  const mapDiv2 = document.getElementById("q1_avgGT");
+  // weekly Average TG for quarter 1
+  const mapDiv2 = document.getElementById("q1_avgGT"); // finds <div> with id=q1_avgGT
 
+  // function that calls q1WeeklyAvg.csv and turns it into data stored in gt_data
   d3.csv("q1WeeklyAvg.csv").then(gt_data => {
-    const week = unpack(gt_data, "qweek");
-    const gt = unpack(gt_data, "avg_tg");
+    const week = unpack(gt_data, "qweek");    // extracts week column from csv
+    const gt = unpack(gt_data, "avg_tg");     // extracts avg_gt column from csv
 
+    // data for chart
     let trace2 = {
-      x: week,
-      y: gt,
-      mode: "lines+markers",
-      type: "line",
-      hovertemplate:
+      x: week,  // sets week as x axis data 
+      y: gt,    // set gt as y axis data
+      mode: "lines+markers",  // shows lines and data points
+      type: "line", // sets chart type as line chart
+      hovertemplate:  // hover template that shows the week and the average global temperature
         "<b>Week:</b> %{x}<br>" +
         "<b>Global Temp:</b> %{y}°C<br><extra></extra>"
     };
 
+    // layout of chart
     let layout2 = {
       xaxis: {
-        title: 'Weekly Timeline (January - March)'
+        title: 'Weekly Timeline (January - March)' // name of x axis
       },
       yaxis: {
-        title: 'Globe Temperature (°C)'
+        title: 'Globe Temperature (°C)' // name of y axis
       },
-      margin: {
+      margin: { // margins of the chart
         t: 50,
         l: 60,
         r: 40,
@@ -88,6 +92,7 @@ function plotQ1Charts() {
       }
     };
 
+    // config to remove the plotly controls and menu bar without removing the hover interactions. Couldn't use { staticPlot: true } as it wouldn't allow hover interactions
     let config = {
       scrollZoom: false,
       displayModeBar: false,
@@ -107,7 +112,7 @@ function plotQ1Charts() {
       ]
     };
 
-    Plotly.newPlot(mapDiv2, [trace2], layout2, config);
+    Plotly.newPlot(mapDiv2, [trace2], layout2, config); //plots the chart in mapDiv1 using data from trace1 with the layout of layout and config of config
   });
 
 
@@ -116,45 +121,52 @@ function plotQ1Charts() {
   const mapDiv = document.getElementById("q1_gtVsPMV");
 
   d3.csv("q1WeeklyAvg.csv").then(ieq_data => {
-    const gt = unpack(ieq_data, "avg_tg");
-    const pmv = unpack(ieq_data, "avg_pmv");
-    const ppd = unpack(ieq_data, "avg_ppd");
+    const gt = unpack(ieq_data, "avg_tg");    // extracts avg_gt column from csv
+    const pmv = unpack(ieq_data, "avg_pmv");  // extracts avg_pmv column from csv
+    const ppd = unpack(ieq_data, "avg_ppd");  // extracts avg_ppd column from csv
 
+    // data for chart
     let trace1 = {
-      x: gt,
-      y: pmv,
-      mode: 'markers',
-      type: 'scatter',
-      marker: {
+      x: gt,  // sets gt data as x axis
+      y: pmv, // sets pmv data as y axis
+      mode: 'markers', // shows no lines, only points
+      type: 'scatter', // sets type as scatter chart
+      marker: { // styling of data points
         size: 12,
         color: ppd,
-        colorscale: [
+        colorscale: [ // colour scale for ppd data
           [0, 'green'],
           [0.5, 'yellow'],
           [1, 'red']
         ],
-        colorbar: {
+        colorbar: {   // sets colour scale bar for ppd
           title: 'PPD (%)',
-          titleside: 'right'
+          titleside: 'right'  // sets colour bar on the right side of the chart
         },
         showscale: true
       },
-      hovertemplate:
+      hovertemplate:  // hover template that shows global temperature, pmv and ppd
         "<b>Globe Temp:</b> %{x}°C<br>" +
         "<b>PMV:</b> %{y}<br>" +
         "<b>PPD:</b> %{marker.color:.2f}%<br><extra></extra>"
     };
 
+    // layout of chart
     let layout = {
       xaxis: {
-        title: 'Globe Temperature (°C)'
+        title: 'Globe Temperature (°C)' // name of x axis
       },
       yaxis: {
-        title: 'Predicted Mean Value (PMV)'
+        title: 'Predicted Mean Value (PMV)' // name of y axis
       },
-      margin: { t: 50, l: 60, r: 40, b: 60 },
-      shapes: [
-        {
+      margin: {  // margins of chart
+        t: 50,
+        l: 60,
+        r: 40,
+        b: 60
+      },
+      shapes: [ // for the two ideal pmv lines
+        { // line for ideal male pmv
           type: 'line',
           xref: 'paper',
           x0: 0,
@@ -162,9 +174,13 @@ function plotQ1Charts() {
           yref: 'y',
           y0: -0.61,
           y1: -0.61,
-          line: { color: 'black', width: 2, dash: 'dot' }
+          line: {
+            color: 'black',
+            width: 2,
+            dash: 'dot'
+          }
         },
-        {
+        { // line for ideal female pmv
           type: 'line',
           xref: 'paper',
           x0: 0,
@@ -172,11 +188,15 @@ function plotQ1Charts() {
           yref: 'y',
           y0: 0.23,
           y1: 0.23,
-          line: { color: 'black', width: 2, dash: 'dot' }
+          line: {
+            color: 'black',
+            width: 2,
+            dash: 'dot'
+          }
         }
       ],
-      annotations: [
-        {
+      annotations: [ // anotations for the ideal pmv lines to label both
+        { // annotation for ideal male pmv line
           xref: 'paper',
           x: 0,
           yref: 'y',
@@ -191,7 +211,7 @@ function plotQ1Charts() {
           bgcolor: 'rgba(255,255,255,0.8)',
           borderpad: 2
         },
-        {
+        { // annotation for ideal female pmv line
           xref: 'paper',
           x: 0,
           yref: 'y',
@@ -209,6 +229,7 @@ function plotQ1Charts() {
       ]
     };
 
+    // config to remove the plotly controls and menu bar without removing the hover interactions. Couldn't use { staticPlot: true } as it wouldn't allow hover interactions
     let config = {
       scrollZoom: false,
       displayModeBar: false,
@@ -228,14 +249,13 @@ function plotQ1Charts() {
       ]
     };
 
-    Plotly.newPlot(mapDiv, [trace1], layout, config);
+    Plotly.newPlot(mapDiv, [trace1], layout, config); //plots the chart in mapDiv1 using data from trace1 with the layout of layout and config of config
   });
 }
 
 
 
 // Function to plot the charts for the second quarter
-
 function plotQ2Charts() {
   // Weekly Average TG for quarter 2
   const mapDiv4 = document.getElementById("q2_avgGT");
